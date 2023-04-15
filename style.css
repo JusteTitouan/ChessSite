@@ -1,0 +1,46 @@
+body {
+    background-color: black;
+}
+* {
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
+.game {
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    height: 80vh;
+    width: 83vh;
+    margin: auto;
+    margin-top: 10vh;
+}
+.game > div {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+.game > div > div > div { 
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.game > div:nth-of-type(2n + 1) > div:nth-of-type(2n + 1), .game > div:nth-of-type(2n) > div:nth-of-type(2n) {
+    background-color: white; 
+}
+.game > div:nth-of-type(2n + 1) > div:nth-of-type(2n), .game > div:nth-of-type(2n) > div:nth-of-type(2n + 1) {
+    background-color: rgb(71, 71, 71);
+}
+div.K { background-image: url(svg/roiBlanc.svg); }
+div.k { background-image: url(svg/roiNoir.svg); }
+div.N { background-image: url(svg/chevalBlanc.svg); }
+div.n { background-image: url(svg/chevalNoir.svg); }
+div.B { background-image: url(svg/fouBlanc.svg); }
+div.b { background-image: url(svg/fouNoir.svg); }
+div.R { background-image: url(svg/tourBlanc.svg); }
+div.r { background-image: url(svg/tourNoir.svg); }
+div.P { background-image: url(svg/pionBlanc.svg); }
+div.p { background-image: url(svg/pionNoir.svg); }
+div.Q { background-image: url(svg/reineBlanc.svg); }
+div.q { background-image: url(svg/reineNoir.svg); }
